@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://d04elen4xsywn"]
+
+[ext_resource type="Texture2D" uid="uid://b88hn1naysbua" path="res://Sprites/MenuSprites/BarrelPile.png" id="1_e2xy7"]
+[ext_resource type="Texture2D" uid="uid://bjg8ltjdyfdj2" path="res://Sprites/MenuSprites/MegaWallR.png" id="1_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://dtda437uvv447" path="res://Sprites/MenuSprites/MenuFloor.png" id="2_fimr5"]
+[ext_resource type="Texture2D" uid="uid://c3s4b1i07l0oj" path="res://Sprites/MenuSprites/MegaWallL.png" id="2_h7a2f"]
+[ext_resource type="Script" uid="uid://bmnj6ekhflfcl" path="res://Start.gd" id="3_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://cxxk8uo126f5v" path="res://Sprites/MenuSprites/MenuGirder.png" id="3_u7cqb"]
+[ext_resource type="Texture2D" uid="uid://d1j8requ84006" path="res://Sprites/MenuSprites/MenuSupport.png" id="4_afec1"]
+[ext_resource type="Texture2D" uid="uid://capkl86twjq80" path="res://icon.svg" id="8_31qfy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_07orm"]
+font_size = 65
+
+[sub_resource type="LabelSettings" id="LabelSettings_qoqlk"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_gc083"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_qjmp5"]
+font_size = 12
+
+[node name="MainMenu" type="Control" unique_id=1053043475]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BarrelPile" type="Sprite2D" parent="." unique_id=175530881]
+position = Vector2(807, 575)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_e2xy7")
+
+[node name="BarrelPile2" type="Sprite2D" parent="." unique_id=61927282]
+position = Vector2(1035, 613)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_e2xy7")
+
+[node name="MenuFloor" type="Sprite2D" parent="." unique_id=1232904833]
+position = Vector2(922, 645)
+texture = ExtResource("2_fimr5")
+
+[node name="MenuGirder" type="Sprite2D" parent="." unique_id=365928542]
+position = Vector2(803.5, 492)
+scale = Vector2(1.1171875, 1)
+texture = ExtResource("3_u7cqb")
+
+[node name="MenuSupport" type="Sprite2D" parent="." unique_id=327363123]
+position = Vector2(979, 358.00003)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_afec1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=68299125]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86500007
+anchor_right = 0.86500007
+offset_left = 72.5199
+offset_top = -21.0
+offset_right = 336.5199
+offset_bottom = 704.0
+grow_horizontal = 0
+texture = ExtResource("1_eiy7p")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=76217483]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86500007
+anchor_right = 0.86500007
+offset_left = -524.4801
+offset_top = -22.0
+offset_right = -260.4801
+offset_bottom = 703.0
+grow_horizontal = 0
+texture = ExtResource("2_h7a2f")
+
+[node name="Label" type="Label" parent="." unique_id=1598949008]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 407.0
+offset_bottom = 112.0
+text = "Going Down"
+label_settings = SubResource("LabelSettings_07orm")
+
+[node name="Label" type="Label" parent="Label" unique_id=2024305768]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 85.0
+offset_right = 391.0
+offset_bottom = 175.0
+text = "A Jumpstart By Jam :)"
+label_settings = SubResource("LabelSettings_qoqlk")
+
+[node name="Label2" type="Label" parent="." unique_id=1536246610]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 174.0
+offset_right = 346.0
+offset_bottom = 264.0
+text = "Your Goal?
+Just get to an exit at the bottom!
+Even a baby could do it! :D"
+label_settings = SubResource("LabelSettings_gc083")
+
+[node name="Button" type="Button" parent="." unique_id=1406792352]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 287.0
+offset_right = 109.0
+offset_bottom = 318.0
+scale = Vector2(2, 2)
+action_mode = 0
+text = "Descend"
+script = ExtResource("3_h7a2f")
+
+[node name="Label3" type="Label" parent="." unique_id=518045269]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 610.0
+offset_right = 163.0
+offset_bottom = 647.0
+text = "please approve this its 4am 
+send help"
+label_settings = SubResource("LabelSettings_qjmp5")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=512643892]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 189.0
+offset_right = 863.0
+offset_bottom = 237.0
+texture = ExtResource("3_u7cqb")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1771458611]
+position = Vector2(769, 161)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_31qfy")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

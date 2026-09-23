@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://76xylo84lhn"]
+
+[ext_resource type="Script" uid="uid://pc8m14tos6qg" path="res://button.gd" id="1_8sw8u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_07orm"]
+font_size = 100
+
+[node name="Win" type="Control" unique_id=1217408117]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -100)
+
+[node name="Label" type="Label" parent="." unique_id=879841829]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -49.5
+offset_right = 212.5
+offset_bottom = 87.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Win!"
+label_settings = SubResource("LabelSettings_07orm")
+
+[node name="Label" type="Label" parent="Label" unique_id=233104425]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "you're a baby!"
+
+[node name="mainmenu" type="Button" parent="." unique_id=719832968]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = 3.25
+offset_right = 78.0
+offset_bottom = 76.75
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 100)
+text = "Main Menu"
+script = ExtResource("1_8sw8u")
+
+[connection signal="pressed" from="mainmenu" to="mainmenu" method="_on_pressed"]

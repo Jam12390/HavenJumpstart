@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Haven Jumpstart"
-run/main_scene="uid://dww81rcta22ft"
+run/main_scene="uid://d04elen4xsywn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[global_group]
+
+Player=""
 
 [physics]
 

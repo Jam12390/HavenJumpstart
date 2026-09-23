@@ -26,5 +26,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		movementSmoothing = move_toward(movementSmoothing, 0.2, 0.1)
-
+	
 	move_and_slide()
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("KillZones"):
+		get_tree().change_scene_to_file("res://Death.tscn")
+	if area.is_in_group("WinZones"):
+		get_tree().change_scene_to_file("res://Win.tscn")
